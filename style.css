@@ -1,0 +1,11 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    color: rgb(95, 95, 95);
+    background-color: #ffffff
+}
+header{
+    font-size: 1.8em;
+    color: #775f54;
+}
