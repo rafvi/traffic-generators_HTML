@@ -1,169 +1,254 @@
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-<main id="main-doc">
-    <section id="wstep" class="main-section">
-        <header>Wstęp</header>
-        <article>
-            <p>Znajomość wydajności sieci jest niezbędna do rozsądnego gospodarowania
-                i planowania rozwoju każdej infrastruktury. Jednym z największych wyzwań
-                wdrożenia jest określenie granicy między teorią a realnymi osiągami.</p>
-            <p>Nawet najbardziej poprawne i szczegółowe projektowanie infrastruktury
-                sieciowej nie daje gwarancji na to czy będzie ona zgodna z osiągami w
-                rzeczywistych scenariuszach. Naturalnym elementem wdrożenia powinno
-                być więc testowanie. Analiza wydajności sieciowej doprowadzi do
-                uzyskania odpowiedniej alokacji zasobów użytkowników.</p>
-            <p>Wydajność sieci może być określona tylko w przypadku, gdy analizator
-                zbierze odpowiednią ilość ściśle określonego ruchu. Gdy wdrażamy nowe
-                rozwiązania, robimy to przeważnie w okresach niskiej aktywności
-                użytkowników w modernizowanej infrastrukturze. Aby odzwierciedlić
-                standardowe, a nawet szczytowe warunki, konieczne będziemy
-                potrzebowali generatora ruchu sieciowego</p>
-        </article>
-    </section>
-    <section id="generatory_ruchu" class="main- section">
-        <header>Generatory ruchu</header>
-        <article>
-            <p>Wykorzystywane do pomiarów w sieci w tym m.in. do pomiaru opóźnienia,
-                przepustowości, utraty pakietów itd..</p>
-            <p>Generatory wysyłają odpowiednio spreparowane pakiety, zawierające
-                unikalne identyfikatory, co ułatwia ich identyfikację i analizę.</p>
-            <p>Urządzenia te zazwyczaj tworzą statystyki, zawierające liczby pakietów
-                wysłanych oraz odebranych, opóźnienia, straty pakietów.</p>
-            <p>Możemy wygenerować ruch do serwerów WWW, urządzeń głosowych
-                VoIP , zapór ogniowych</p>
-            <p>Generatory ruchu w sieci mogą pomóc poprzez generowanie przepływu
-                ruchu w całej danej ścieżce sieciowej, a następnie pomiar stanu każdego
-                urządzenia sieciowego (np. przełączników, routerów i firewalli) na drodze
-                do wykrycia i wyeliminowania ewentualnych błędów.</p>
-            <p>Zastosowanie generatora ruchu sieciowego ma na celu sprawdzenie
-                gotowości infrastruktury sieciowej przed wdrożeniem aplikacji.</p>
-        </article>
-    </section>
-    <section id="sprzetowe_generatory_ruchu" class="main-section">
-        <header>Sprzętowe generatory ruchu</header>
-        <article>
-            <p>Idealne rozwiązanie dla dużej infrastruktury, gdzie niezbędna jest wysoka wydajność rozwiązania</p>
-            <p>Posiadają zintegrowany analizator i rejestrator
-                przeprowadzanych testów</p>
-            <p>Poszukując informacji na temat sprzętowych
-                generatorów, warto przyjrzeć się produktom firm:
-                Spirent, Fluke Networks, Agilent, VeriWave/Ixia.</p>
-        </article>
-    </section>
-    <section id="programowalne_generatory_ruchu" class="main-section">
-        <header>Programowalne generatory ruchu</header>
-        <article>
-            <p>Ograniczone przez wydajność komputera, na którym
-                zainstalowane jest oprogramowanie</p>
-            <p>Często bazują na bibliotekach - Pcap, Ncap, Dashcap</p>
-            <p>Najczęściej nie oferują analizy ruchu/wydajności (w
-                takich przypadkach analizę wydajności sieci najczęściej
-                umożliwiają mechanizmy SNMP oraz przepływy)</p>
-            <p>Najpopularniejsze generatory programowe to: IPerf,
-                NetPertf, NetPIPE, Harpoon, ttcp, nuttcp i Pktgen.</p>
-        </article>
-    </section>
-    <section id="diversifeye" class="main-section">
-        <header>diversifEye</header>
-        <article>
-            <p>Platforma testowa do oceny wydajności, jakości usług (QoS) i jakości
-                doświadczeń (QoE) </p>
-            <p>System testowy dla sieci, które są oferowane przez producentów
-                urządzeń sieciowych, usługodawców, dużych przedsiębiorstw i
-                rządów, które muszą ocenić wydajność sieci, jakość obsługi(QoS) i
-                jakość doświadczenia(QoE). System diversifEye ma na celu
-                wspieranie wdrożeń telewizji IPTV, dostarczając pasywnych i
-                aktywnych funkcji monitorowania, które można skalować do tysięcy
-                kanałów IPTV.</p>
-            <p>Umożliwia testowanie aplikacji i funkcji IPTV(Internet Protocol
-                Television), Video na żądanie (VOD), telepresence, Voice over IP
-                (VoIP), szybkiej transmisji danych (Internet, poczta elektroniczna,
-                DNS, P2P, FTP), TWAMP (Two-Way Active Measurement Protocol) i
-                testowania bezpiecznych połączeń VPN.</p>
-            <p>Ponadto diversifEye pozwala użytkownikom łatwo
-                wygenerować w pełni zautomatyzowanych raportów i
-                statystyk zawierające podsumowania konfiguracji
-                testowej i wyniki. </p>
-            <p>Raport jest dostępny w wielu formatach w tym JPEG,
-                CSV, PDF i HTML</p>
-            <p>Testy mogą być tworzone za pomocą GUI klienta,
-                poprzez XML lub za pomocą skryptów(języki takie jak
-                Perl lub Tcl)</p>
-            <p>Możliwa konfiguracja również za pomocą wiersza
-                poleceń poprzez SSH</p>
-        </article>
-    </section>
-    <section id="iptv_vod_voip" class="main-section">
-        <header>IPTV, VoD, VoIP(Triple Play)</header>
-        <article>
-            <p>Testy usług "Triple Play" wymagają emulacji środowiska
-                wielu abonentów i generacji ruchu dla usług sieciowych
-                email, http, głos, IPTV/VoD i innych oraz jednoczesnej
-                symulacji ruchu obciążającego sieć (P2P, BitTorrent, FTP,
-                DdoS), występującego w realnej sieci. </p>
-            <p>DiversifEye jest idealnym systemem dla testów usług "Triple
-                Play" w sieciach xDSL, FO, DOCSIS 3.0, WiMax, DBV i
-                innych. diversifEye jest stosowany zarówno przez
-                producentów sprzętu jaki i przez operatorów sieci do
-                weryfikacji obciążalności aplikacji i sieci transmisyjnej oraz
-                jakości usług IPTV/VoD, VoIP i Internet, emulowanych od
-                strony abonentów i sieci w realnym środowisku sieci
-                transmisyjnej.</p>
-            <p>System emuluje ruch i analizuje jakość IPTV TS Multicast/Unicast (IGMP,
-                RTSP), transmisji MPEG-2/4, wykonuje testy aktywne (PESQ) i pasywne
-                VoIP (SIP/RTP) oraz testy DHCP, SMTP, POP, poziomu ruchu P2 i odporności
-                sieci na ataki DDoS. </p>
-            <p>Emulacja STB i SIP/RTP wraz wynikami testów są wykonywane
-                indywidualnie dla każdego abonenta, dla każdej usługi, strumienia i
-                interfejsu, dla wielu abonentów jednocześnie. </p>
-            <p>DiversifEye może być wyposażony w 2-48 portów Gigabit Ethernet oraz 2-
-                6 portów10-Gigabit Ethernet. IPTV/VoD, VoIP i usługi w sieci Internet
-                wymgają oceny jakości QoS (Quality of Service) na poziomie sieci oraz
-                szczegółowej analizy jakościowej QoE (Quality of Experience) usług
-                odbieranych przez abonenta. System analizuje parametry transmisyjne i
-                jakościowe dla poszczególnych strumieni, interfejsów, abonentów oraz
-                aplikacji i dostarcza szczegółowe statystyki o ruchu, transmisji i
-                parametrach jakościowych dostarczanych usług.</p>
-        </article>
-    </section>
-    <section id="przeglad_oprogramowania" class="main-section">
-        <header>Przegląd oprogramowania</header>
-        <article>
-            <ul>
-                <li>Emulacja serwera PPPoE</li>
-                <li>Atakami z DDoS (SYN / RST / UDP / ARP powodzie) i wirusów / robaków ataków</li>
-                <li>FTP (aktywne i pasywne) </li>
-                <li>Multiuser</li>
-                <li>RTP (media only) </li>
-                <li>SIP z wielu strumieni RTP </li>
-                <li>Przechwytywanie i odtwarzanie </li>
-                <li>Multicast IGMP IPTV testu wsparcia i MLDv1, 2 </li>
-                <li>Wideo na żądanie</li>
-                <li>Voice over IP (SIP / RTP)</li>
-                <li>Voice i Video Media Analysis (zarówno bierny TVQM / R czynnikiem i aktywny PEVQ / PESQ) </li>
-                <li>HTTP (Client i / lub serwera emulacji) </li>
-                <li>SMTP i POP3 (serwer i klient emulacji) </li>
-                <li>P2P (peer to peer) </li>
-                <li>DHCP</li>
-                <li>Usługa warstwy PPPoE oraz VLAN (w tym dwukrotnie tagged)</li>
-            </ul>
-        </article>
-    </section>
-    <section id="iperf" class="main-section">
-        <header>Iperf</header>
-    </section>
-    <section id="netperf" class="main-section">
-        <header>Netperf</header>
-    </section>
-    <section id="d-itg" class="main-section">
-        <header>D-ITG</header>
-    </section>
-    <section id="ip_traffic" class="main-section">
-        <header>IP Traffic</header>
-    </section>
-    <section id="porownanie_narzedzi" class="main-section">
-        <header>Porównanie narzędzi</header>
-    </section>
-    <section id="bibliografia" class="main-section">
-        <header>Bibliografia</header>
-    </section>
-</main>
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generatory ruchu</title>
+</head>
+
+<body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <main id="main-doc">
+        <section id="wstep" class="main-section">
+            <header>Wstęp</header>
+            <article>
+                <p>Znajomość wydajności sieci jest niezbędna do rozsądnego gospodarowania
+                    i planowania rozwoju każdej infrastruktury. Jednym z największych wyzwań
+                    wdrożenia jest określenie granicy między teorią a realnymi osiągami.</p>
+                <p>Nawet najbardziej poprawne i szczegółowe projektowanie infrastruktury
+                    sieciowej nie daje gwarancji na to czy będzie ona zgodna z osiągami w
+                    rzeczywistych scenariuszach. Naturalnym elementem wdrożenia powinno
+                    być więc testowanie. Analiza wydajności sieciowej doprowadzi do
+                    uzyskania odpowiedniej alokacji zasobów użytkowników.</p>
+                <p>Wydajność sieci może być określona tylko w przypadku, gdy analizator
+                    zbierze odpowiednią ilość ściśle określonego ruchu. Gdy wdrażamy nowe
+                    rozwiązania, robimy to przeważnie w okresach niskiej aktywności
+                    użytkowników w modernizowanej infrastrukturze. Aby odzwierciedlić
+                    standardowe, a nawet szczytowe warunki, konieczne będziemy
+                    potrzebowali generatora ruchu sieciowego</p>
+            </article>
+        </section>
+        <section id="generatory_ruchu" class="main- section">
+            <header>Generatory ruchu</header>
+            <article>
+                <p>Wykorzystywane do pomiarów w sieci w tym m.in. do pomiaru opóźnienia,
+                    przepustowości, utraty pakietów itd..</p>
+                <p>Generatory wysyłają odpowiednio spreparowane pakiety, zawierające
+                    unikalne identyfikatory, co ułatwia ich identyfikację i analizę.</p>
+                <p>Urządzenia te zazwyczaj tworzą statystyki, zawierające liczby pakietów
+                    wysłanych oraz odebranych, opóźnienia, straty pakietów.</p>
+                <p>Możemy wygenerować ruch do serwerów WWW, urządzeń głosowych
+                    VoIP , zapór ogniowych</p>
+                <p>Generatory ruchu w sieci mogą pomóc poprzez generowanie przepływu
+                    ruchu w całej danej ścieżce sieciowej, a następnie pomiar stanu każdego
+                    urządzenia sieciowego (np. przełączników, routerów i firewalli) na drodze
+                    do wykrycia i wyeliminowania ewentualnych błędów.</p>
+                <p>Zastosowanie generatora ruchu sieciowego ma na celu sprawdzenie
+                    gotowości infrastruktury sieciowej przed wdrożeniem aplikacji.</p>
+            </article>
+        </section>
+        <section id="sprzetowe_generatory_ruchu" class="main-section">
+            <header>Sprzętowe generatory ruchu</header>
+            <article>
+                <p>Idealne rozwiązanie dla dużej infrastruktury, gdzie niezbędna jest wysoka wydajność rozwiązania</p>
+                <p>Posiadają zintegrowany analizator i rejestrator
+                    przeprowadzanych testów</p>
+                <p>Poszukując informacji na temat sprzętowych
+                    generatorów, warto przyjrzeć się produktom firm:
+                    Spirent, Fluke Networks, Agilent, VeriWave/Ixia.</p>
+            </article>
+        </section>
+        <section id="programowalne_generatory_ruchu" class="main-section">
+            <header>Programowalne generatory ruchu</header>
+            <article>
+                <p>Ograniczone przez wydajność komputera, na którym
+                    zainstalowane jest oprogramowanie</p>
+                <p>Często bazują na bibliotekach - Pcap, Ncap, Dashcap</p>
+                <p>Najczęściej nie oferują analizy ruchu/wydajności (w
+                    takich przypadkach analizę wydajności sieci najczęściej
+                    umożliwiają mechanizmy SNMP oraz przepływy)</p>
+                <p>Najpopularniejsze generatory programowe to: IPerf,
+                    NetPertf, NetPIPE, Harpoon, ttcp, nuttcp i Pktgen.</p>
+            </article>
+        </section>
+        <section id="diversifeye" class="main-section">
+            <header>diversifEye</header>
+            <article>
+                <p>Platforma testowa do oceny wydajności, jakości usług (QoS) i jakości
+                    doświadczeń (QoE) </p>
+                <p>System testowy dla sieci, które są oferowane przez producentów
+                    urządzeń sieciowych, usługodawców, dużych przedsiębiorstw i
+                    rządów, które muszą ocenić wydajność sieci, jakość obsługi(QoS) i
+                    jakość doświadczenia(QoE). System diversifEye ma na celu
+                    wspieranie wdrożeń telewizji IPTV, dostarczając pasywnych i
+                    aktywnych funkcji monitorowania, które można skalować do tysięcy
+                    kanałów IPTV.</p>
+                <p>Umożliwia testowanie aplikacji i funkcji IPTV(Internet Protocol
+                    Television), Video na żądanie (VOD), telepresence, Voice over IP
+                    (VoIP), szybkiej transmisji danych (Internet, poczta elektroniczna,
+                    DNS, P2P, FTP), TWAMP (Two-Way Active Measurement Protocol) i
+                    testowania bezpiecznych połączeń VPN.</p>
+                <p>Ponadto diversifEye pozwala użytkownikom łatwo
+                    wygenerować w pełni zautomatyzowanych raportów i
+                    statystyk zawierające podsumowania konfiguracji
+                    testowej i wyniki. </p>
+                <p>Raport jest dostępny w wielu formatach w tym JPEG,
+                    CSV, PDF i HTML</p>
+                <p>Testy mogą być tworzone za pomocą GUI klienta,
+                    poprzez XML lub za pomocą skryptów(języki takie jak
+                    Perl lub Tcl)</p>
+                <p>Możliwa konfiguracja również za pomocą wiersza
+                    poleceń poprzez SSH</p>
+            </article>
+        </section>
+        <section id="iptv_vod_voip" class="main-section">
+            <header>IPTV, VoD, VoIP(Triple Play)</header>
+            <article>
+                <p>Testy usług "Triple Play" wymagają emulacji środowiska
+                    wielu abonentów i generacji ruchu dla usług sieciowych
+                    email, http, głos, IPTV/VoD i innych oraz jednoczesnej
+                    symulacji ruchu obciążającego sieć (P2P, BitTorrent, FTP,
+                    DdoS), występującego w realnej sieci. </p>
+                <p>DiversifEye jest idealnym systemem dla testów usług "Triple
+                    Play" w sieciach xDSL, FO, DOCSIS 3.0, WiMax, DBV i
+                    innych. diversifEye jest stosowany zarówno przez
+                    producentów sprzętu jaki i przez operatorów sieci do
+                    weryfikacji obciążalności aplikacji i sieci transmisyjnej oraz
+                    jakości usług IPTV/VoD, VoIP i Internet, emulowanych od
+                    strony abonentów i sieci w realnym środowisku sieci
+                    transmisyjnej.</p>
+                <p>System emuluje ruch i analizuje jakość IPTV TS Multicast/Unicast (IGMP,
+                    RTSP), transmisji MPEG-2/4, wykonuje testy aktywne (PESQ) i pasywne
+                    VoIP (SIP/RTP) oraz testy DHCP, SMTP, POP, poziomu ruchu P2 i odporności
+                    sieci na ataki DDoS. </p>
+                <p>Emulacja STB i SIP/RTP wraz wynikami testów są wykonywane
+                    indywidualnie dla każdego abonenta, dla każdej usługi, strumienia i
+                    interfejsu, dla wielu abonentów jednocześnie. </p>
+                <p>DiversifEye może być wyposażony w 2-48 portów Gigabit Ethernet oraz 2-
+                    6 portów10-Gigabit Ethernet. IPTV/VoD, VoIP i usługi w sieci Internet
+                    wymgają oceny jakości QoS (Quality of Service) na poziomie sieci oraz
+                    szczegółowej analizy jakościowej QoE (Quality of Experience) usług
+                    odbieranych przez abonenta. System analizuje parametry transmisyjne i
+                    jakościowe dla poszczególnych strumieni, interfejsów, abonentów oraz
+                    aplikacji i dostarcza szczegółowe statystyki o ruchu, transmisji i
+                    parametrach jakościowych dostarczanych usług.</p>
+            </article>
+        </section>
+        <section id="przeglad_oprogramowania" class="main-section">
+            <header>Przegląd oprogramowania</header>
+            <article>
+                <ul>
+                    <li>Emulacja serwera PPPoE</li>
+                    <li>Atakami z DDoS (SYN / RST / UDP / ARP powodzie) i wirusów / robaków ataków</li>
+                    <li>FTP (aktywne i pasywne) </li>
+                    <li>Multiuser</li>
+                    <li>RTP (media only) </li>
+                    <li>SIP z wielu strumieni RTP </li>
+                    <li>Przechwytywanie i odtwarzanie </li>
+                    <li>Multicast IGMP IPTV testu wsparcia i MLDv1, 2 </li>
+                    <li>Wideo na żądanie</li>
+                    <li>Voice over IP (SIP / RTP)</li>
+                    <li>Voice i Video Media Analysis (zarówno bierny TVQM / R czynnikiem i aktywny PEVQ / PESQ) </li>
+                    <li>HTTP (Client i / lub serwera emulacji) </li>
+                    <li>SMTP i POP3 (serwer i klient emulacji) </li>
+                    <li>P2P (peer to peer) </li>
+                    <li>DHCP</li>
+                    <li>Usługa warstwy PPPoE oraz VLAN (w tym dwukrotnie tagged)</li>
+                </ul>
+            </article>
+        </section>
+        <section id="iperf" class="main-section">
+            <header>Iperf</header>
+            <article>
+                <p>Wykorzystywane do oceny parametrów, takich jak
+                    przepustowość, opóźnienie, rozmiar okna, utrata
+                    pakietów. Jest on stosowany w ocenie zarówno TCP
+                    i UDP.</p>
+                <p>Narzędzie dostępne z wiersza poleceń </p>
+                <p>Działa zarówno na platformie Linux i Windows</p>
+                <p>Najnowsza wersja iperf, wersja 1.7, jest
+                    zaprojektowana do pracy z IPv4 i IPv6.</p>
+            </article>
+        </section>
+        <section id="netperf" class="main-section">
+            <header>Netperf</header>
+            <article>
+                <p>Opracowany przez firmę Hewlett-Packard</p>
+                <p>Może być wykorzystywane do pomiaru wydajności
+                    wielu różnych typów sieci i zapewnia testy
+                    przepustowość i opóźnień end-to-end. </p>
+                <p> Podobne do iperf, Netperf mogą być stosowane
+                    zarówno TCP i UDP w sieciach IPv4 lub IPv6</p>
+                <p> To narzędzie może być wykorzystywane do systemów
+                    operacyjnych takich jak:
+                    UNIX (wszystkie główne warianty), Linux i Windows. </p>
+                <p> Posiada dwa oddzielne pliki wykonywalne: jeden po
+                    strony serwera i drugi po stronie klienta. </p>
+            </article>
+        </section>
+        <section id="d-itg" class="main-section">
+            <header>D-ITG</header>
+            <article>
+                <p>Platforma jest w stanie wyprodukować ruch dla różnych
+                    wielkością pakietów oraz wielu różnych rozkładów
+                    prawdopodobieństwa jakich jak: wykładniczy, Pareto,
+                    Cauchy'ego, normalny, Poissona, Gamma. Ta funkcja nie jest
+                    dostępna dla iperf i Netperf.</p>
+                <p>D-ITG może monitorować różne protokoły takie jak: TCP,
+                    UDP, ICMP, DNS, Telnet i VoIP . To narzędzie mierzy
+                    przepustowość i opóźnienie, round-trip-time (RTT) oraz
+                    utrate pakietów przy użyciu dwóch różnych oddzielnych
+                    elementów o nazwie ITG-Send i ITG-Receive.</p>
+                <p>D-ITG jest przeznaczony do uruchamiania na Linuksie i
+                    Platforma Windows</p>
+                <p>Najnowsza wersja jest zgodny z IPv6.</p>
+            </article>
+        </section>
+        <section id="ip_traffic" class="main-section">
+            <header>IP Traffic</header>
+            <article>
+                <p>Komercyjne oprogramowanie opracowane przez ZTITelecom.</p>
+                <p>Narzędzie monitorowania / testowania dla sieci</p>
+                <p>IP-Traffic posiada graficzny Interfejs</p>
+                <p>Windows 98, Windows XP, Windows 2003 i Windows Vista.</p>
+                <p>Podobnie jak większość innych narzędzi, IP-Traffic wymaga dwóch
+                    oddzielnych części: Traffic-Generator i Traffic-Answering.</p>
+                <p>Traffic-Generator może generować, odbieraćnie, przechwytywać i
+                    odtwarzać ruch IP (TCP, UDP lub ICMP). Użytkownik może ustawić
+                    parametry konfiguracji indywidualnie dla każdego połączenia, aby
+                    kształtować i kontrolować obciążenie ruchem. </p>
+                <p>Traffic-Answering zapewnia analizę przepustowości, opóźnień
+                    pakietów.</p>
+            </article>
+        </section>
+        <section id="porownanie_narzedzi" class="main-section">
+            <header>Porównanie narzędzi</header>
+            <article>
+                <img src="images/comparison_tools.png" alt="Comparison Tools">
+            </article>
+        </section>
+        <section id="bibliografia" class="main-section">
+            <header>Bibliografia</header>
+            <article>
+                <ul>
+                    <li><code>S. Kolahi, Shaneel Narayan, Du. D. T. Nguyen,
+                        Yonathan Sunarto Performance Monitoring of Various
+                        Network Traffic Generators</code></li>
+                    <li><code>http://www.shenick.com/media_lib/files/Tolly-Shenick-
+                        diversifEye.pdf</code></li>
+                    <li><code>http://diversifeye.shenick.com/show_product_page.php
+                        ?id=1011</code></li>
+                    <li><code>Stefano Avallone, Antonio Pescape, Giorgio Ventre
+                        Distributed Internet Traffic Generator(D-ITG): analysis
+                        and experimention over heterogeneous networks</code></li>
+                    <li><code>http://www.grid.unina.it/software/ITG/index.php</code></li>
+                    <li><code>http://www.netperf.org/netperf</code></li>
+                    <li><code>http://wiki.mikrotik.com/wiki/Manual:IP/Traffic_Flow</code></li>
+                </ul>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
