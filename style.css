@@ -1,11 +1,82 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+html, body{
     font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
     font-size: 1em;
     line-height: 1.5;
     color: rgb(95, 95, 95);
     background-color: #ffffff
 }
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: 1px solid;
+    height: 100%;
+    font-style: italic;
+}
+#navbar header{
+    margin-left: 10px;
+    color: #55443c;
+}
+#navbar ul{
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#navbar li{
+    list-style: none;
+    border-top: 1px solid;
+    color: rgb(95, 95, 95);
+    padding: 4px;
+}
+#navbar a{
+    display: block;
+    text-decoration: none;
+    margin-left: 10px;
+    cursor: pointer;
+    color: rgb(63, 63, 63);
+}
+.nav-end{
+    border-bottom: 1px solid;
+    color: rgb(95, 95, 95);
+}
+#main-doc{
+    position: absolute;
+    margin-left: 270px;
+}
 header{
     font-size: 1.8em;
     color: #775f54;
+}
+article{
+    margin-left: 20px;
+}
+article li{
+    list-style: square;
+}
+.picture{
+    width: 80%;
+}
+@media only screen and (max-width: 360px) {
+    /* For mobile phones: */
+    #navbar ul {
+      border: 1px solid;
+      height: 200px;
+    }
+    #navbar {
+        background-color: white;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        max-height: 300px;
+        z-index: 1;
+      }
+      #main-doc {
+          position: relative;
+          margin-top: 300px;
+          margin-left: 0;
+      }
 }
